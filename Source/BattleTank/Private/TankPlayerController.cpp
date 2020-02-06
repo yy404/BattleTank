@@ -18,7 +18,6 @@ void ATankPlayerController::BeginPlay()
     }
 }
 
-
 void ATankPlayerController::Tick(float DeltaTime)
 {
     Super::Tick(DeltaTime);
@@ -26,12 +25,10 @@ void ATankPlayerController::Tick(float DeltaTime)
     AimTowardsCrosshair();
 }
 
-
 ATank* ATankPlayerController::GetControlledTank() const
 {
     return Cast<ATank>(GetPawn());
 }
-
 
 void ATankPlayerController::AimTowardsCrosshair()
 {
@@ -61,7 +58,6 @@ bool ATankPlayerController::GetSightRayHitLocation(FVector& OutHitLocation) cons
        // Line-trace along that look direction, and see what we hit (up to max range)
         GetLookVectorHitLocation(LookDirection, OutHitLocation);
     }
-    
     
     return true;
 }
